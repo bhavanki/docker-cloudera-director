@@ -14,8 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+DIRECTOR_VERSION_REPLACE_ME
+
 CLOUDERA_DIRECTOR_HOME=/home/director
-DIRECTOR_SERVER_HOME="${CLOUDERA_DIRECTOR_HOME}/cloudera-director-server-2.7.0"
+DIRECTOR_SERVER_HOME="${CLOUDERA_DIRECTOR_HOME}/cloudera-director-server-${DIRECTOR_VERSION}"
 DB_DIR="${CLOUDERA_DIRECTOR_HOME}/db"
 ETC_DIR="${DIRECTOR_SERVER_HOME}/etc"
 PID_DIR="${DIRECTOR_SERVER_HOME}"
