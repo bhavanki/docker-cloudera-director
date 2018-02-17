@@ -34,7 +34,7 @@ JAVA_OPTS=("-XX:+CMSClassUnloadingEnabled"
 
 echo "Starting Cloudera Director Server"
 cd "${DIRECTOR_SERVER_HOME}" || exit "Failed to cd to ${DIRECTOR_SERVER_HOME}"
-java "${JAVA_OPTS[@]}" \
+exec java "${JAVA_OPTS[@]}" \
     -Dpid.file="${PID_DIR}/application.pid" \
     -Djava.awt.headless=true \
     -Djava.net.preferIPv4Stack=true \
