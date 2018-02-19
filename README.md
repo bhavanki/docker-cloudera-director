@@ -10,11 +10,23 @@ Although I'm a developer who works on Cloudera Director, this is not an official
 
 ## Usage
 
-Assuming an image tag of "director", run the Cloudera Director image:
+### Pull from Docker Hub
+
+To get the latest:
 
 ```
-docker build -t director .
-docker run -p 7189:7189 director
+docker pull havanki4j/cloudera-director
+```
+
+Browse the tags available at the [repository](https://hub.docker.com/r/havanki4j/cloudera-director/) to find images for different versions of Cloudera Director.
+
+### Build Yourself
+
+Assuming an image tag of "cloudera-director", run the Cloudera Director image:
+
+```
+docker build -t cloudera-director .
+docker run -p 7189:7189 cloudera-director
 ```
 
 The image exposes TCP port 7189, so be sure to publish the port when running. Then, point your browser to the published port to use the Cloudera Director server UI.
