@@ -2,7 +2,7 @@
 
 This project defines a [Docker](https://www.docker.com/) image for running the [Cloudera Director](https://www.cloudera.com/products/product-components/cloudera-director.html) server.
 
-Current version: **2.7.0**
+Current version: **2.7.1**
 
 ## Caveats
 

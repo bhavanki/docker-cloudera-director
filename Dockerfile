@@ -14,7 +14,7 @@
 
 FROM openjdk:8-jre
 
-ARG version=2.7.0
+ARG version=2.7.1
 ARG majorVersion=2
 
 LABEL maintainer="havanki4j@gmail.com"
