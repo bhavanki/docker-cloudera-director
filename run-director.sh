@@ -30,9 +30,12 @@ ACCESS_LOGGING_CONFIG="${ETC_DIR}/logback-access.xml"
 
 CLASSPATH="$(find "${DIRECTOR_SERVER_HOME}/lib" -name "launchpad-server-*-exec.jar")"
 
+# Last two options here are so Java 8 respects cgroup memory limits
 JAVA_OPTS=("-XX:+CMSClassUnloadingEnabled"
     "-Xms512m"
-    "-Xmx1g")
+    "-Xmx1g"
+    "-XX:+UnlockExperimentalVMOptions"
+    "-XX:+UseCGroupMemoryLimitForHeap")
 
 echo "Starting Cloudera Director Server"
 cd "${DIRECTOR_SERVER_HOME}" || exit "Failed to cd to ${DIRECTOR_SERVER_HOME}"
