@@ -14,8 +14,8 @@
 
 FROM openjdk:8-jre
 
-ARG version=2.8.0
-ARG majorVersion=2
+ARG version=6.0.0
+ARG majorVersion=6
 
 LABEL maintainer="havanki4j@gmail.com"
 LABEL description="Cloudera Director Server"
@@ -24,9 +24,9 @@ RUN groupadd director && useradd -g director -m director
 USER director
 
 WORKDIR /home/director
-RUN curl -O http://archive.cloudera.com/director/director/${majorVersion}/cloudera-director-server-${version}-director${version}.tar.gz && \
-  tar xzf cloudera-director-server-${version}-director${version}.tar.gz && \
-  rm cloudera-director-server-${version}-director${version}.tar.gz
+RUN curl -O http://archive.cloudera.com/director${majorVersion}/${version}/tars/cloudera-director-server-${version}.tar.gz && \
+  tar xzf cloudera-director-server-${version}.tar.gz && \
+  rm cloudera-director-server-${version}.tar.gz
 EXPOSE 7189
 
 RUN mkdir /home/director/logs
