@@ -22,14 +22,14 @@ Browse the tags available at the [repository](https://hub.docker.com/r/havanki4j
 
 ### Build Yourself
 
-Assuming an image tag of "cloudera-director", run the Cloudera Director image:
+Assuming an image tag of "cloudera-director", run the Altus Director image:
 
 ```
 docker build -t cloudera-director .
 docker run -p 7189:7189 cloudera-director
 ```
 
-The image exposes TCP port 7189, so be sure to publish the port when running. Then, point your browser to the published port to use the Cloudera Director server UI.
+The image exposes TCP port 7189, so be sure to publish the port when running. Then, point your browser to the published port to use the Altus Director server UI.
 
 To stop the container:
 
@@ -39,7 +39,17 @@ docker stop <container-id>
 
 ### Volumes
 
-The directories /home/director/db and /home/director/logs are declared as volumes in the image for storing the Director database and logs, respectively. Save these volumes across container runs to keep state and log history. See Docker documentation for how to manage them.
+The directories /home/director/db and /home/director/logs are declared as volumes in the image for storing the Altus Director database and logs, respectively. Save these volumes across container runs to keep state and log history. See Docker documentation for how to manage them.
+
+## Kubernetes
+
+The simple Kubernetes deployment manifest [director-deployment.yaml](director-deployment.yaml) describes a single Altus Director server pod and a corresponding nodeport service to expose it outside of the Kubernetes cluster.
+
+```
+kubectl create -f director-deployment.yaml
+minikube service cloudera-director-svc # to reach the server UI, when using minikube
+kubectl delete -f director-deployment.yaml
+```
 
 ## License
 
