@@ -24,7 +24,7 @@ RUN groupadd director && useradd -g director -m director
 USER director
 
 WORKDIR /home/director
-RUN curl -O http://archive.cloudera.com/director${majorVersion}/${version}/tars/cloudera-director-server-${version}.tar.gz && \
+RUN curl -L -O https://archive.cloudera.com/director${majorVersion}/${version}/tars/cloudera-director-server-${version}.tar.gz && \
   tar xzf cloudera-director-server-${version}.tar.gz && \
   rm cloudera-director-server-${version}.tar.gz
 EXPOSE 7189
