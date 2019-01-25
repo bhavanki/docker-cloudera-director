@@ -1,4 +1,4 @@
-# Copyright 2018 William A. Havanki, Jr.
+# Copyright 2019 William A. Havanki, Jr.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 FROM openjdk:8-jre
 
-ARG version=6.0.0
+ARG version=6.1.0
 ARG majorVersion=6
 
 LABEL maintainer="havanki4j@gmail.com"

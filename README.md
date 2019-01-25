@@ -1,12 +1,12 @@
 # docker-cloudera-director
 
-This project defines a [Docker](https://www.docker.com/) image for running the [Cloudera Director](https://www.cloudera.com/products/product-components/cloudera-director.html) server.
+This project defines a [Docker](https://www.docker.com/) image for running the [Cloudera Altus Director](https://www.cloudera.com/products/product-components/cloudera-director.html) server.
 
-Current version: **6.0.0**
+Current version: **6.1.0**
 
 ## Caveats
 
-Although I'm a developer who works on Cloudera Director, this is not an official Cloudera project, so do not expect support from Cloudera (or myself, potentially) for this project. Also, I'm not a Docker expert, so as usual, proceed with using this image at your own risk.
+Although I'm a developer who works on Altus Director, this is not an official Cloudera project, so do not expect support from Cloudera (or myself, potentially) for this project. Also, I'm not a Docker expert, so as usual, proceed with using this image at your own risk.
 
 ## Usage
 
@@ -18,7 +18,7 @@ To get the latest:
 docker pull havanki4j/cloudera-director
 ```
 
-Browse the tags available at the [repository](https://hub.docker.com/r/havanki4j/cloudera-director/) to find images for different versions of Cloudera Director.
+Browse the tags available at the [repository](https://hub.docker.com/r/havanki4j/cloudera-director/) to find images for different versions of Altus Director.
 
 ### Build Yourself
 
