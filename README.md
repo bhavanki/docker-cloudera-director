@@ -2,7 +2,7 @@
 
 This project defines a [Docker](https://www.docker.com/) image for running the [Cloudera Altus Director](https://www.cloudera.com/products/product-components/cloudera-director.html) server.
 
-Current version: **6.1.0**
+Current version: **6.2.0**
 
 ## Caveats
 
