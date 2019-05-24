@@ -40,7 +40,7 @@ spec:
         app: cloudera-director
     spec:
       containers:
-        - image: havanki4j/cloudera-director:6.2.0-0.1.0
+        - image: havanki4j/cloudera-director:6.2.1-0.1.0
           name: cloudera-director
           ports:
             - containerPort: 7189
