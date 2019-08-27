@@ -14,7 +14,7 @@
 
 FROM openjdk:8-jre
 
-ARG version=6.2.1
+ARG version=6.3.0
 ARG majorVersion=6
 
 LABEL maintainer="havanki4j@gmail.com"
