@@ -17,7 +17,6 @@ FROM openjdk:8-jre
 ARG version=6.3.0
 ARG majorVersion=6
 
-LABEL maintainer="havanki4j@gmail.com"
 LABEL description="Cloudera Director Server"
 
 RUN groupadd director && useradd -g director -m director
